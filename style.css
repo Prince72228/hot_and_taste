@@ -400,43 +400,17 @@ body {
     50% { opacity: 1; }
 }
 
-@media (max-width: 600px) {
-    .food-frame img {
-        width: 150px;
-        height: 120px;
-    }
-
-    .food-frame {
-        width: 180px;
-        height: auto;
-        padding: 10px;
-    }
-
-    .main-title {
-        font-size: 2rem;
-        letter-spacing: 2px;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .menu-items {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-
-    .prev-btn {
-        left: -50px;
-    }
-
-    .next-btn {
-        right: -50px;
-    }
+@media (max-width: 768px) { 
+    .main-title { font-size: 2.5rem; margin-bottom: 20px; } 
+    .book { height: 500px; } 
+    .nav-btn { width: 45px; height: 45px; font-size: 1.5rem; } 
+    .prev-btn { left: -60px; } .next-btn { right: -60px; } 
+    .page-content { padding: 20px; } 
+    .section-title { font-size: 1.8rem; } 
+    .food-frame img { width: 250px; height: 180px; }
+    .veg-items { flex-direction: column; } 
+    .food-frame.diamond { width: 240px; height: 240px; padding: 30px; } 
+    .food-frame.diamond img { width: 180px; height: 180px; }
+     .food-frame.octagon { width: 260px; height: 220px; padding: 20px; } 
+     .food-frame.octagon img { width: 220px; height: 160px; } 
 }
