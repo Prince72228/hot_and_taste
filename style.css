@@ -100,8 +100,8 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 }
 
 @media (max-width: 768px) { /* Small tablets and phones - maintain zigzag with smaller offsets */
-    .main-title { font-size: 2.5rem; margin-bottom: 20px; }
-    .book { height: 500px; }
+    .main-title { font-size: 1.6rem; margin-bottom: 2px; margin-top: 2px; }
+    .book { width: 100%; position: relative;}
     .nav-btn { width: 45px; height: 45px; font-size: 1.5rem; }
-    .veg-items { flex-direction: column; gap: 15px; }  /* Stack vertically on very small screens for better zigzag visibility */
+    .veg-items { flex-direction: column; gap: 15px; }
 }
