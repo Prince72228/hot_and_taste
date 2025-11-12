@@ -5,11 +5,11 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 
 @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-.menu-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+.menu-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 1vh 1vw; /* Very small padding (1% of screen) to make book close to background for thin border effect */ }
 
-.main-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; text-align: center; margin-bottom: 40px; background: linear-gradient(45deg, #ff0000, #ff6600, #ffcc00, #ff0000); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradientShift 3s ease infinite; text-shadow: 0 0 30px rgba(255, 100, 0, 0.8), 0 0 60px rgba(255, 50, 0, 0.6); filter: drop-shadow(0 0 20px rgba(255, 100, 0, 0.9)); letter-spacing: 5px; }
+.main-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; text-align: center; margin-bottom: 5px; /* Very small margin-bottom for tiny gap between title and book */ padding: 0 0.5rem 0.5rem 0.5rem; background: linear-gradient(45deg, #ff0000, #ff6600, #ffcc00, #ff0000); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradientShift 3s ease infinite; text-shadow: 0 0 30px rgba(255, 100, 0, 0.8), 0 0 60px rgba(255, 50, 0, 0.6); filter: drop-shadow(0 0 20px rgba(255, 100, 0, 0.9)); letter-spacing: 5px; }
 
-.book { width: 95%; max-width: 100%; height: clamp(500px, 80vh, 80vh); perspective: 2000px; position: relative; }
+.book { width: 95%; max-width: 100%; height: clamp(600px, 90vh, 90vh); perspective: 2000px; position: relative; }
 
 .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #ff6600, #ff0000); color: white; border: 3px solid rgba(255, 200, 0, 0.8); width: clamp(45px, 8vw, 60px); height: clamp(45px, 8vw, 60px); border-radius: 50%; font-size: clamp(1.5rem, 3vw, 2rem); cursor: pointer; z-index: 100; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(255, 100, 0, 0.6), 0 0 20px rgba(255, 150, 0, 0.4); display: flex; align-items: center; justify-content: center; }
 
@@ -41,7 +41,7 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 
 .page-2::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(circle at 30% 40%, rgba(144, 238, 144, 0.2) 0%, transparent 40%), radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.15) 0%, transparent 50%); pointer-events: none; }
 
-.page-content { padding: clamp(20px, 5vw, 50px); height: 100%; max-height: 100%; display: flex; flex-direction: column; position: relative; z-index: 2; overflow-y: auto; overflow-x: hidden; }
+.page-content { padding: clamp(30px, 7vw, 70px); height: 100%; max-height: 100%; display: flex; flex-direction: column; position: relative; z-index: 2; overflow-y: auto; overflow-x: hidden; }
 
 .page-content::-webkit-scrollbar { width: 8px; }
 
@@ -53,13 +53,13 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 
 .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); text-align: center; margin-bottom: 30px; color: #fff; text-shadow: 0 0 20px rgba(255, 200, 0, 0.8), 0 4px 10px rgba(0, 0, 0, 0.5); letter-spacing: 3px; font-weight: 900; }
 
-.menu-items { display: flex; flex-direction: column; gap: 30px; align-items: center; flex: 1; justify-content: center; }
+.menu-items { display: flex; flex-direction: column; gap: clamp(40px, 5vw, 50px); align-items: center; flex: 1; justify-content: center; }
 
-.veg-items { flex-direction: row; flex-wrap: wrap; gap: 20px; justify-content: center; }  /* Added justify-content for better centering in zigzag */
+.veg-items { flex-direction: row; flex-wrap: wrap; gap: clamp(25px, 4vw, 40px); justify-content: center; }
 
 .food-item1, .food-item2, .food-item14, .food-item15 { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.food-item1 { padding-left: clamp(20px, 15vw, 350px); }  /* Minimum 20px to maintain zigzag */
+.food-item1 { padding-left: clamp(20px, 15vw, 350px); }
 
 .food-item2 { padding-right: clamp(20px, 15vw, 350px); }
 
@@ -81,7 +81,7 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 
 .food-frame.diamond img { width: clamp(180px, 30vw, 220px); height: clamp(180px, 30vw, 220px); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
 
-.food-frame.octagon { clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); width: clamp(260px, 40vw, 320px); height: clamp(220px, 35vw, 280px); padding: 25px; display: flex-direction: column; align-items: center; justify-content: center; }
+.food-frame.octagon { clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); width: clamp(260px, 40vw, 320px); height: clamp(220px, 35vw, 280px); padding: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
 .food-frame.octagon img { width: clamp(220px, 35vw, 270px); height: clamp(160px, 25vw, 200px); clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
 
@@ -95,13 +95,15 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 
 @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
 
-@media (max-width: 1024px) { /* Tablets - keep zigzag but reduce for wrapping */
-    .veg-items { gap: 15px; }
+@media (max-width: 1024px) { /* Tablets - moderate scaling */
+    .veg-items { gap: 20px; }
+    .menu-items { gap: 35px; }
+    .page-content { padding: 40px; }
 }
 
 @media (max-width: 868px) { /* Small tablets and phones - maintain zigzag with smaller offsets */
     .main-title { font-size: 1.6rem; margin-bottom: 2px; margin-top: 2px; }
-    .book { width: 100%; position: relative; height: 618px;}
+    .book { width: 100%; position: relative; height: 618px; }
     .nav-btn { width: 45px; height: 45px; font-size: 1.5rem; }
     .veg-items { flex-direction: column; gap: 15px; }
 }
