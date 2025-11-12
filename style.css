@@ -5,9 +5,9 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
 
 @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-.menu-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 1vh 1vw; /* Very small padding (1% of screen) to make book close to background for thin border effect */ }
+.menu-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 1vh 1vw; }
 
-.main-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; text-align: center; margin-bottom: 5px; /* Very small margin-bottom for tiny gap between title and book */ padding: 0 0.5rem 0.5rem 0.5rem; background: linear-gradient(45deg, #ff0000, #ff6600, #ffcc00, #ff0000); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradientShift 3s ease infinite; text-shadow: 0 0 30px rgba(255, 100, 0, 0.8), 0 0 60px rgba(255, 50, 0, 0.6); filter: drop-shadow(0 0 20px rgba(255, 100, 0, 0.9)); letter-spacing: 5px; }
+.main-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; text-align: center; margin-bottom: 5px; padding: 0 0.5rem 0.5rem 0.5rem; background: linear-gradient(45deg, #ff0000, #ff6600, #ffcc00, #ff0000); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradientShift 3s ease infinite; text-shadow: 0 0 30px rgba(255, 100, 0, 0.8), 0 0 60px rgba(255, 50, 0, 0.6); filter: drop-shadow(0 0 20px rgba(255, 100, 0, 0.9)); letter-spacing: 5px; }
 
 .book { width: 95%; max-width: 100%; height: clamp(600px, 90vh, 90vh); perspective: 2000px; position: relative; }
 
@@ -101,9 +101,9 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
     .page-content { padding: 40px; }
 }
 
-@media (max-width: 868px) { /* Small tablets and phones - maintain zigzag with smaller offsets */
+@media (max-width: 868px) { /* Small tablets and phones - responsive height and width based on screen size */
     .main-title { font-size: 1.6rem; margin-bottom: 2px; margin-top: 2px; }
-    .book { width: 100%; position: relative; height: 618px; }
+    .book { width: 100vw; /* Full viewport width */ height: 90vh; /* 80% of viewport height for responsive fit */ position: relative; }
     .nav-btn { width: 45px; height: 45px; font-size: 1.5rem; }
     .veg-items { flex-direction: column; gap: 15px; }
 }
