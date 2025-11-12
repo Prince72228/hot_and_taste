@@ -99,9 +99,9 @@ body { overflow-x: hidden; overflow-y: auto; width: 100vw; min-height: 100vh; fo
     .veg-items { gap: 15px; }
 }
 
-@media (max-width: 768px) { /* Small tablets and phones - maintain zigzag with smaller offsets */
+@media (max-width: 868px) { /* Small tablets and phones - maintain zigzag with smaller offsets */
     .main-title { font-size: 1.6rem; margin-bottom: 2px; margin-top: 2px; }
-    .book { width: 100%; position: relative;}
+    .book { width: 100%; position: relative; height: 618px;}
     .nav-btn { width: 45px; height: 45px; font-size: 1.5rem; }
     .veg-items { flex-direction: column; gap: 15px; }
 }
